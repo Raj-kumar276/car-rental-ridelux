@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -37,6 +37,45 @@ const About = () => {
     if (returnPickerRef.current) {
       returnPickerRef.current.setFocus();
     }
+  };
+
+  const [formData, setFormData] = useState({
+    name: "",
+    comments: "",
+  });
+
+  useEffect(() => {
+    const savedName = localStorage.getItem("renterName");
+    if (savedName) {
+      setFormData((prevData) => ({ ...prevData, name: savedName }));
+    }
+  }, []);
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+
+  const handleSaveName = () => {
+    localStorage.setItem("enterName",formData .name);
+    alert("Your name has been saved for future visits!");
+  };
+
+  const handleBooking = () => {
+    // Save name to localStorage for future use
+    localStorage.setItem("renterName", formData.name);
+
+    const bookingDetails = {
+      pickUpDate,
+      returnDate,
+      name: formData.name,
+      comments: formData.comments,
+    };
+    console.log("Booking Details:", bookingDetails);
+    alert("Booking submitted! Your name has been saved for future visits.");
   };
 
   return (
@@ -149,16 +188,16 @@ const About = () => {
               <div className="absolute top-[110%] left-0 w-48 bg-[#1f1f1f] border border-[#e8021f] rounded-sm shadow-md opacity-0 scale-95 invisible group-hover:opacity-100 group-hover:scale-100 group-hover:visible transition-all duration-300 ease-in-out z-50">
                 <ul className="divide-y divide-gray-700">
                   <li className="px-4 py-2 hover:bg-[#e8021f] transition cursor-pointer">
-                    Japan
+                    Tirupati
                   </li>
                   <li className="px-4 py-2 hover:bg-[#e8021f] transition cursor-pointer">
-                    New York
+                    Gudur
                   </li>
                   <li className="px-4 py-2 hover:bg-[#e8021f] transition cursor-pointer">
-                    Bangladesh
+                    Nellore
                   </li>
                   <li className="px-4 py-2 hover:bg-[#e8021f] transition cursor-pointer">
-                    Dubai
+                    Bangalore
                   </li>
                 </ul>
               </div>
@@ -229,6 +268,41 @@ const About = () => {
 
               <i className="ri-calendar-line text-[#e8021f] pointer-events-none"></i>
             </div>
+          </div>
+          <div className="mt-6 w-[90%] max-w-[1200px] mx-auto text-right">
+            <div className="text-left mb-4">
+              <label htmlFor="name" className="text-white mb-2 block">Your Name</label>
+              <div className="flex items-center gap-4">
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter your name"
+                  className="w-full bg-[#1f1f1f] text-white placeholder-gray-400 border border-gray-600 rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-[#e8021f]"
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+                <button
+                  onClick={handleSaveName}
+                  className="bg-gray-600 text-white px-6 py-4 rounded-lg font-medium hover:bg-gray-700 transition-colors duration-300"
+                >
+                  Save Name
+                </button>
+              </div>
+            </div>
+            <textarea
+              id="comments"
+              className="w-full bg-[#1f1f1f] text-white placeholder-gray-400 border border-gray-600 rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-[#e8021f] mb-4"
+              rows="4"
+              placeholder="Add any additional comments or requests..."
+              value={formData.comments}
+              onChange={handleChange}
+            ></textarea>
+            <button
+              onClick={handleBooking}
+              className="bg-[#e8021f] text-white px-8 py-4 rounded-full font-medium flex items-center gap-2 hover:bg-black transition-colors duration-300 cursor-pointer inline-flex"
+            >
+              Book Now <i className="ri-arrow-right-line"></i>
+            </button>
           </div>
         </div>
       </div>

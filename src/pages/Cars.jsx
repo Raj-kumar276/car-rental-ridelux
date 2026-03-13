@@ -11,8 +11,8 @@ const Cars = () => {
     const [selectedDropoff, setSelectedDropoff] = useState([]);
 
     const categories = [...new Set(cardata.map((car)=> car.type))];
-    const pickupLocations = ["Abu Dhabi", "Alain", "Bangladesh","Dubai"];
-    const dropoffLocations = ["Abu Dhabi", "Alain", "Bangladesh","Dubai"];
+    const pickupLocations = ["Tirupati", "Gudur", "Nellore","Bangalore"];
+    const dropoffLocations = ["Tirupati", "Gudur", "Nellore","Bangalore"];
 
     const handleCheckBoxChange = (value,state,setState) => {
         if(state.includes(value)){
@@ -154,7 +154,7 @@ const Cars = () => {
                 </ul>
                 <div className="flex justify-between items-center mt-12">
                   <h4 className="text-2xl md:text-4xl text-gray-400 font-bold bricolage-font">
-                    $ {car.price}/day
+                    Rs {car.price}/day
                   </h4>
                   <Link to={`/car/${car.id}`}>
                     <button className="text-white bg-red-600 hover:bg-black transition-all duration-300 px-5 py-3 text-lg md:text-xl rounded-full cursor-pointer">

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +14,10 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav
       className={`px-[12%] text-white fixed top-0 left-0 w-full z-[999] transition-all duration-300 ${
@@ -25,6 +29,7 @@ const Navbar = () => {
         <Link
           to="/"
           className="text-2xl md:text-4xl font-bold logo bricolage-font"
+          onClick={handleLinkClick}
         >
           Ride<span>lux</span>
         </Link>
@@ -53,44 +58,70 @@ const Navbar = () => {
           } lg:max-h-none lg:opacity-100`}
         >
           <li>
-            <Link
+            <NavLink
               to="/"
-              className="text-lg transition px-4 py-2 lg:px-0 lg:py-0 font-normal bricolage-font"
+              className={({ isActive }) =>
+                `text-lg transition px-4 py-2 lg:px-0 lg:py-0 font-normal bricolage-font ${
+                  isActive ? "text-red-600" : ""
+                }`
+              }
+              onClick={handleLinkClick}
+              end
             >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/about"
-              className="text-base lg:text-lg transition px-4 py-2 lg:px-0 lg:py-0 font-normal bricolage-font"
+              className={({ isActive }) =>
+                `text-base lg:text-lg transition px-4 py-2 lg:px-0 lg:py-0 font-normal bricolage-font ${
+                  isActive ? "text-red-600" : ""
+                }`
+              }
+              onClick={handleLinkClick}
             >
               About
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/cars"
-              className="text-base lg:text-lg transition px-4 py-2 lg:px-0 lg:py-0 font-normal bricolage-font"
+              className={({ isActive }) =>
+                `text-base lg:text-lg transition px-4 py-2 lg:px-0 lg:py-0 font-normal bricolage-font ${
+                  isActive ? "text-red-600" : ""
+                }`
+              }
+              onClick={handleLinkClick}
             >
               Cars
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/blog"
-              className="text-base lg:text-lg transition px-4 py-2 lg:px-0 lg:py-0 font-normal bricolage-font"
+              className={({ isActive }) =>
+                `text-base lg:text-lg transition px-4 py-2 lg:px-0 lg:py-0 font-normal bricolage-font ${
+                  isActive ? "text-red-600" : ""
+                }`
+              }
+              onClick={handleLinkClick}
             >
               Blog
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/contact"
-              className="text-base lg:text-lg transition px-4 py-2 lg:px-0 lg:py-0 font-normal bricolage-font"
+              className={({ isActive }) =>
+                `text-base lg:text-lg transition px-4 py-2 lg:px-0 lg:py-0 font-normal bricolage-font ${
+                  isActive ? "text-red-600" : ""
+                }`
+              }
+              onClick={handleLinkClick}
             >
               Contact
-            </Link>
+            </NavLink>
           </li>
         </ul>
 
@@ -99,7 +130,7 @@ const Navbar = () => {
           <i className="bi bi-telephone flex items-center justify-center bg-[#e8021f] rounded-full text-2xl w-[45px] h-[45px] "></i>
           <div>
             <p className="text-xs text-white font-normal">Need help?</p>
-            <p className="font-semibold">855 100 6000</p>
+            <p className="font-semibold">+91 11234567</p>
           </div>
         </div>
       </div>

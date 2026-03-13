@@ -56,15 +56,15 @@ const Contact = () => {
             <div className="space-y-6 text-gray-300">
               <div className="flex items-start gap-4">
                 <i className="fa-solid fa-location-dot text-red-600 text-2xl"></i>
-                <p>123 Main Street, Dhaka, Bangladesh</p>
+                <p>Tirupati </p>
               </div>
               <div className="flex items-start gap-4">
                 <i className="fa-solid fa-phone text-red-600 text-2xl"></i>
-                <p>+880 123 456 789</p>
+                <p>+91 1223456758</p>
               </div>
               <div className="flex items-start gap-4">
                 <i className="fa-solid fa-envelope text-red-600 text-2xl"></i>
-                <p>support@example.com</p>
+                <p>pamujularajkumar@gmail.com</p>
               </div>
             </div>
           </div>

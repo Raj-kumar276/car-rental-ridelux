@@ -269,16 +269,16 @@ const Index = () => {
               <div className="absolute top-[110%] left-0 w-48 bg-[#1f1f1f] border border-[#e8021f] rounded-sm shadow-md opacity-0 scale-95 invisible group-hover:opacity-100 group-hover:scale-100 group-hover:visible transition-all duration-300 ease-in-out z-50">
                 <ul className="divide-y divide-gray-700">
                   <li className="px-4 py-2 hover:bg-[#e8021f] transition cursor-pointer">
-                    Japan
+                    Tirupati
                   </li>
                   <li className="px-4 py-2 hover:bg-[#e8021f] transition cursor-pointer">
-                    New York
+                    Gudur
                   </li>
                   <li className="px-4 py-2 hover:bg-[#e8021f] transition cursor-pointer">
-                    Bangladesh
+                    Nellore
                   </li>
                   <li className="px-4 py-2 hover:bg-[#e8021f] transition cursor-pointer">
-                    Dubai
+                    Bangalore
                   </li>
                 </ul>
               </div>
@@ -317,13 +317,13 @@ const Index = () => {
                     Drop off Location
                   </li>
                   <li className="px-4 py-2 hover:bg-[#e8021f] transition cursor-pointer">
-                    New York
+                    Tirupati
                   </li>
                   <li className="px-4 py-2 hover:bg-[#e8021f] transition cursor-pointer">
-                    Bangladesh
+                    Gudur
                   </li>
                   <li className="px-4 py-2 hover:bg-[#e8021f] transition cursor-pointer">
-                    Dubai
+                   Nellore
                   </li>
                 </ul>
               </div>
@@ -704,7 +704,7 @@ const Index = () => {
                 </ul>
                 <div className="flex justify-between items-center mt-12">
                   <h4 className="text-2xl md:text-4xl text-gray-400 font-bold bricolage-font">
-                    $ {car.price}/day
+                    Rs {car.price}/day
                   </h4>
                   <Link to={`/car/${car.id}`}>
                     <button className="text-white bg-red-600 hover:bg-black transition-all duration-300 px-5 py-3 text-lg md:text-xl rounded-full cursor-pointer">
@@ -890,7 +890,7 @@ const Index = () => {
                 </div>
                 <div className="ps-[100px]">
                   <p className="bricolage-font text-xl text-[#e8021f]">
-                    Sophia K
+                    Suresh
                   </p>
                   <p className="text-[#999] text-sm bricolage-font">Traveler</p>
                 </div>
@@ -924,7 +924,7 @@ const Index = () => {
                 </div>
                 <div className="ps-[100px]">
                   <p className="bricolage-font text-xl text-[#e8021f]">
-                    Daniel R
+                    Tharun
                   </p>
                   <p className="text-[#999] text-sm bricolage-font">
                     Frequent User

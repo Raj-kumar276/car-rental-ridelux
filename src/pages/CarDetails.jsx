@@ -158,7 +158,7 @@ const CarDetails = () => {
         <div className="w-full lg:w-[320px] space-y-6 bg-[#1a1a1a] rounded-2xl p-6 shadow-md h-full">
           <div className="text-center">
             <p className="text-5xl font-bold text-white bricolage-font">
-              $ {car.price}{" "}
+              Rs {car.price}{" "}
               <span className="text-sm font-medium bricolage-font text-white">
                 / Rent Per Day
               </span>
@@ -310,9 +310,9 @@ const CarDetails = () => {
                     className="w-full h-[50px] px-3 bg-[#121212] text-white rounded-md border border-gray-600 focus:ring-2 focus:ring-red-500 outline-none"
                   >
                     <option hidden>Pick-Up Location</option>
-                    <option>Dubai</option>
-                    <option>Abu Dhabi</option>
-                    <option>Bangladesh</option>
+                    <option>Tirupati</option>
+                    <option>Gudur</option>
+                    <option>Nellore</option>
                   </select>
                 </div>
 
@@ -340,8 +340,8 @@ const CarDetails = () => {
                     className="w-full h-[50px] px-3 bg-[#121212] text-white rounded-md border border-gray-600 focus:ring-2 focus:ring-red-500 outline-none"
                   >
                     <option hidden>Drop-Off Location</option>
-                    <option>Sharjah</option>
-                    <option>Al Ain</option>
+                    <option>Suresh</option>
+                    <option>Aarya</option>
                   </select>
                 </div>
 

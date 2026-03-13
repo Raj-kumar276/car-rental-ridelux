@@ -101,10 +101,10 @@ const Footer = () => {
 
         <div className="text-[#999] text-center text-base relative py-6">
           <p className="bricolage-font">
-            © 2025. All Right Reserved. <a href="" className="text-white bricolage-font">Ridelux</a>
+            © 2026. All Right Reserved. <a href="" className="text-white bricolage-font">Ridelux</a>
           </p>
           <p className="bricolage-font">
-            Developed By <a href="https://amdadislam.netlify.app/" className="bricolage-font">Amdad Islam</a>
+            Developed By <a href="https://amdadislam.netlify.app/" className="bricolage-font">Dhanush</a>
           </p>
         </div>
       </footer>
